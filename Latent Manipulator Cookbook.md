@@ -1,8 +1,15 @@
+# Latent Manipulator Cookbook.md
 
-
-This guide explains the "Latent Manipulator," an experimental AI architecture designed to "think" in a latent space before generating text, contrasting with standard Transformer models that predict text sequentially. It includes the theory, code for implementation, and links to resources.
+This guide explains the "Latent Manipulator," an experimental AI architecture designed to "think" in a latent space before generating text, contrasting with standard Transformer models that predict text sequentially. It includes the theory, code for implementation, and links to datasets and pretrained model checkpoints.
 
 Based on the video exploring this concept: [https://www.youtube.com/watch?v=fWiieyG2zes]
+
+### ⚠️ This project is free to use. If you find it helpful, please consider supporting it by checking out Peach Voice Typing: [https://peach-voice.com]
+
+
+
+Note:
+   > This project doesn’t have a dedicated integrated repository. It’s a compilation of multiple standalone scripts, patched together with the help of language models.
 
 ## Why a Latent Manipulator? The Theory
 
@@ -173,6 +180,8 @@ The training data for the Latent Manipulator consists of pairs of latent embeddi
 #### a) Combining Raw Data (if needed)
 
 The example uses the LaMini dataset, provided as Parquet files. If your data is similar, you first need to combine these into a single file (e.g., JSONL).
+
+You can find the raw data i used in [https://huggingface.co/datasets/MBZUAI/LaMini-instruction/tree/main/data]
 
 ```python
 # --- Combine Parquet files into a single JSONL (Example) ---
@@ -370,7 +379,6 @@ This defines the neural network that learns to map question embeddings to answer
 *   **Architecture:** A series of Linear layers, BatchNorm, LeakyReLU, and Dropout. Intermediate outputs are "choked" (reduced) to 2048 dimensions and concatenated with the original input before final aggregation layers. This complex structure aims to handle deep transformations while mitigating vanishing/exploding gradients.
 *   **Output:** 1024-dimensional latent vector (to be fed to Decoder).
 
-*(Code provided by the user, slightly adjusted for clarity and comments)*
 
 ```python
 # --- Latent Manipulator Model Definition ---
