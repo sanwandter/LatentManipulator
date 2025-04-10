@@ -1,4 +1,4 @@
-# Latent Manipulator Cookbook.md
+# The Latent Manipulator Cookbook.md
 
 This guide explains the "Latent Manipulator," an experimental AI architecture designed to "think" in a latent space before generating text, contrasting with standard Transformer models that predict text sequentially. It includes the theory, code for implementation, and links to datasets and pretrained model checkpoints.
 
