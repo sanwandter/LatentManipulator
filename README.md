@@ -4,12 +4,6 @@ This guide explains the "Latent Manipulator," an experimental AI architecture de
 
 Based on the video exploring this concept: [https://www.youtube.com/watch?v=fWiieyG2zes]
 
-### ⚠️ This project is free to use. If you find it helpful, please consider supporting it by checking out Peach Voice Typing: [https://peach-voice.com]
-
-
-
-Note:
-   > This project doesn’t have a dedicated integrated repository. It’s a compilation of multiple standalone scripts, patched together with the help of language models.
 
 ## Why a Latent Manipulator? The Theory
 
